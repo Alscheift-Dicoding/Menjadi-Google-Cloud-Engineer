@@ -122,10 +122,12 @@ body {
     stroke: var(--bg-color-1);
 }
 
-
+.intro {
+    margin-top: 18rem;
+}
 .intro--name {
     color: var(--color-1);
-    margin: 12rem auto 0 auto;
+    margin-bottom: 4rem;
     font-size: 10rem;
     font-family: "Sacramento", cursive;
 }
@@ -133,12 +135,36 @@ body {
 .intro--me {
     color: var(--color-1);
     font-size: 4rem;
-    margin: 4rem auto 0 auto;
 }
 
 #element {
     color: inherit;
 }
+
+/*******************/
+/* Photo */
+/*******************/
+.intro .container:nth-child(1) {
+    flex-basis: 80%;
+    justify-content: center;
+}
+
+.photo-wrapper {
+    background-color: var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.photo {
+    border-radius: 100%;
+    max-width: 300px;
+    width: auto;
+    transform: scale(0.95);
+}
+
 
 /*******************/
 /* Hobbies Section */
