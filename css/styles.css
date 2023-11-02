@@ -1,0 +1,392 @@
+/********************/
+/* *, Root, and Tag */
+/********************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    color: black;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    --bg-color-1: #339af0;
+    --bg-color-2: #fff;
+    --bg-color-3: #343a40;
+
+    --color-1: #fff;
+    --color-2: #555;
+    
+    --shadow-color-1: rgba(51, 51, 51, 0.3);
+    
+    background-color: var(--bg-color-2);
+    
+    font-size: 62.5%;
+    /* font size => 62.5% * 16px = 10px */
+    /* 1rem = 10px */
+
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/************/
+/* Reusable */
+/************/
+
+.container {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-v {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap-4{
+    gap: 4rem;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+/**********/
+/* Header */
+/**********/
+
+.header {
+    background-color: var(--bg-color-1);
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    box-shadow: 0px 3px 10px 1px var(--shadow-color-1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--bg-color-3);
+    padding: 1rem;
+    z-index: 1;
+}
+
+.navbar--image {
+    width: 28px;
+    height: 28px;
+}
+
+.navbar--nav {
+    display: flex;
+    list-style: none;
+    margin-right: 4rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: monospace;
+    color: var(--bg-color-1);
+}
+
+.btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    display: none;
+}
+  
+.icon-mobile-nav {
+    height: 4.8rem;
+    width: 4.8rem;
+}
+
+.icon-mobile-nav svg{
+    stroke: var(--bg-color-1);
+}
+
+
+.intro--name {
+    color: var(--color-1);
+    margin: 12rem auto 0 auto;
+    font-size: 10rem;
+    font-family: "Sacramento", cursive;
+}
+
+.intro--me {
+    color: var(--color-1);
+    font-size: 4rem;
+    margin: 4rem auto 0 auto;
+}
+
+#element {
+    color: inherit;
+}
+
+/*******************/
+/* Hobbies Section */
+/*******************/
+
+.section--hobbies {
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+}
+
+.hobbies--heading {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    color: #555;
+}
+
+.hobbies-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.hobbies-img {
+    padding: 3rem;
+    width: 22rem;
+    height: auto;
+    border-radius: 50%;
+    width: 250px;
+    height: auto;
+}
+
+.hobbies-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    padding: 4rem;
+    gap: 1rem;
+}
+
+/*******************/
+/* Skills Section */
+/*******************/
+
+.section--skills {
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+}
+
+.section--heading {
+    margin: 0 auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    color: #555;
+}
+
+.skills {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.skill {
+    width: 12.8rem;
+    height: 12.8rem;
+}
+
+.skill img{
+    align-items: center;
+    width: 10rem;
+    height: auto;
+}
+/*******************/
+/* Projects Section*/
+/*******************/
+
+.section--projects {
+    margin: 0 auto;
+    width: 100rem;
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+}
+
+.slider-wrapper {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides-container {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 3rem;
+}
+
+.slide-arrow {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: auto;
+    height: 4rem;
+    background-color: var(--bg-color-3);
+    color: var(--bg-color-2);
+    border: none;
+    width: 2rem;
+    font-size: 3rem;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+    background-color: var(--bg-color-1);
+}
+
+
+
+#slide-arrow-prev {
+    left: 0;
+    padding-left: 0.25rem;
+    border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+    right: 0;
+    padding-left: 0.75rem;
+    border-radius: 2rem 0 0 2rem;
+}
+
+.slide {
+    width: 100%;
+    height: 60rem;
+    flex: 1 0 100%;
+    background-color:var(--bg-color-2);
+    box-shadow: 0px 3px 25px 1px rgba(51, 51, 51, 0.1);
+    border-radius: 25px;
+    padding: 4rem;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.slide-image{
+    align-items: center;
+    gap: 2rem;
+    height: 100%;
+}
+
+.slide-image img {
+    border-radius: 25px;
+    width: 78rem; 
+    height: auto;
+}
+
+.slide-text {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    padding: 1rem;
+}
+
+.active {
+    visibility: visible;
+}
+
+
+.slides-container::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+
+/*******************/
+/*      Footer     */
+/*******************/
+
+.footer {
+    background-color: var(--bg-color-1);
+    padding: 2rem 0 3rem 0;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    box-shadow: 0px -1px 20px 0.2px var(--shadow-color-1);
+
+    font-size: 2rem;
+}
+
+.mycontact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.footer-link {
+    color: var(--color-1);
+    outline-style: none;
+    text-decoration: none;
+    font-weight: 1000;
+    margin: auto 0.5rem;
+    
+}
+
+.footer-link svg{
+    fill: var(--color-1);
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-link svg:hover {
+    transform: translateY(-5px);
+}
+
+
+.copyright {
+    color: var(--color-1);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 30px;
+    margin: auto;
+}
+
+/* Misc */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 85%;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    box-shadow: 0px 3px 10px 1px var(--shadow-color-1);
+}
+
+
+.typed-cursor {
+    color:  var(--color-1);
+}

@@ -1,0 +1,162 @@
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .hobbies-img {
+        width: 225px;
+        height: 225px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 47.5%;
+    }
+    
+    .header {
+        height: 100%;
+        padding-bottom: 32rem;
+    }
+
+    .hobbies-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 40%;
+    }
+
+    .hobbies-img {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /* MOBILE NAVIGATION */
+    .btn-mobile-nav {
+        display: block;
+        z-index: 9999;
+    }
+
+    .navbar {
+        padding-bottom: 2rem;
+    }
+
+    .navbar--nav {
+        background-color: var(--bg-color-3);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        /* transform: translateX(100%); */
+
+        flex-direction: column;
+        gap: 4.8rem;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in;
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .nav-open .navbar--nav {
+        opacity: 85%;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .mobile-nav-close {
+        display: none;
+    }
+
+    .nav-open .mobile-nav-menu {
+        display: none;
+    }
+    
+    .nav-open .mobile-nav-close {
+        display: block;
+    }
+
+    .nav-link:link,
+    .nav-link:visited {
+        font-size: 4rem;
+    }   
+
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 35%;
+    }
+
+    .hobbies-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 35%;
+    }
+
+    .hobbies-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 516px) {
+    html {
+        font-size: 30%;
+    }
+
+    .hobbies-img {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 432px) {
+    html {
+        font-size: 25%;
+    }
+
+    .hobbies-img {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    html {
+        font-size: 20%;
+    }
+
+    .hobbies-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 18%;
+    }
+
+    .hobbies-img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
