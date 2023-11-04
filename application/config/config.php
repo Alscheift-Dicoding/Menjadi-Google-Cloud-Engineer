@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // TODO: Sesuaikan dengan base url front-end yang digunakan
-// $config['base_url'] = 'base_url_frontend_Anda';
+$config['base_url'] = 'http://frontend.submission-mgce-afifnurfauzi.et.r.appspot.com';
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +53,7 @@ $config['index_page'] = 'index.php';
 |
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
 */
-$config['uri_protocol']	= 'REQUEST_URI';
+$config['uri_protocol']    = 'REQUEST_URI';
 
 /*
 |--------------------------------------------------------------------------
@@ -77,7 +77,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language']    = 'english';
 
 /*
 |--------------------------------------------------------------------------
@@ -401,11 +401,11 @@ $config['sess_regenerate_destroy'] = FALSE;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix']	= '';
-$config['cookie_domain']	= '';
-$config['cookie_path']		= '/';
-$config['cookie_secure']	= FALSE;
-$config['cookie_httponly'] 	= FALSE;
+$config['cookie_prefix']    = '';
+$config['cookie_domain']    = '';
+$config['cookie_path']        = '/';
+$config['cookie_secure']    = FALSE;
+$config['cookie_httponly']     = FALSE;
 
 /*
 |--------------------------------------------------------------------------
