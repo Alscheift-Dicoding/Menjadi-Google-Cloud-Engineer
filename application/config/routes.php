@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -50,6 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['records'] = 'records';
+$route['records/search'] = 'records/search';
 $route['records/add'] = 'records/add';
 $route['default_controller'] = 'dashboard';
 $route['404_override'] = '';

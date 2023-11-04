@@ -47,6 +47,19 @@ class Record_model extends CI_Model
         return $result;
     }
 
+    public function getSearchRecords()
+    {
+        $search = $this->input->post('search');
+        $response = $this->client->request('GET', '/searchrecords', [
+            'query' => [
+                's' => $search
+            ]
+        ]);
+        $result = json_decode($response->getBody()->getContents(), true);
+
+        return $result;
+    }
+
     public function getRecordById($id)
     {
         $response = $this->client->request('GET', '/getrecord/' . $id, []);

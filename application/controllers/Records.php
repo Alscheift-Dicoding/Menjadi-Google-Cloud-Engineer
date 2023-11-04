@@ -15,6 +15,11 @@ class Records extends CI_Controller {
         $this->load->view('my_records', $data);
     }
 
+    public function search() {
+        $data['records'] = $this->record_model->getSearchRecords();
+        $this->load->view('my_records', $data);
+    }
+
     public function add() {
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
